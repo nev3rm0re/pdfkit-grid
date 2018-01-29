@@ -31,13 +31,13 @@ doc.text('Hello world!');
 
 # Available methods
 
-### Styling methods
+## Styling methods
 
-#### boldText\(\)
+### boldText()
 
-### Layout methods
+## Layout methods
 
-#### grid\(\)
+### grid\(\)
 
 You can find more detailed description of methods in the [API section](/api.md) of documentation.
 
