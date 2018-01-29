@@ -35,6 +35,18 @@ doc.text('Hello world!');
 
 ### boldText()
 
+Prints text in "Bold" font at `x` and `y` position on the page. `options` array is passed to 
+`pdfkit`'s `text()` method. Additionally `fontSize` parameter is available to set size of "bold"
+text.
+
+You need to register "Bold" font beforehand:
+
+```js
+const doc = new PDFDocument({/* ... */});
+doc.registerFont("Bold", "Helvetica-Bold");
+
+doc.text('Hello, ').boldText('world', null, null, { fontSize: 12 });
+```
 ## Layout methods
 
 ### grid()
