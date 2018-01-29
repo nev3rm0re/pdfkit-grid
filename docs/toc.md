@@ -1,2 +1,2 @@
 * [Api](/api.md)
-  * [.boldText](/api.md#boldText)
+  * [.boldText](/api.md#module_pdfkitgrid.boldText)
