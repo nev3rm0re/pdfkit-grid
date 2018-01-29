@@ -1,4 +1,4 @@
-<a id="module_pdfkitgrid" name="module_pdfkitgrid"></a>
+<a id="module_pdfkitgrid"></a>
 
 ## pdfkitgrid
 
@@ -10,7 +10,7 @@
     * [.row(cells)](#module_pdfkitgrid.row)
     * [.grid(cells, globalOptions)](#module_pdfkitgrid.grid)
 
-<a id="module_pdfkitgrid.boldText" name="module_pdfkitgrid.boldText"></a>
+<a id="module_pdfkitgrid.boldText"></a>
 
 ### pdfkitgrid.boldText(text, x, y, options)
 Sets font to "Bold" (has to be 'pre-registered')
@@ -29,7 +29,7 @@ Options:
 | y | <code>int</code> |  | 
 | options | <code>object</code> | <code>{}</code> | 
 
-<a id="module_pdfkitgrid.move" name="module_pdfkitgrid.move"></a>
+<a id="module_pdfkitgrid.move"></a>
 
 ### pdfkitgrid.move(x, y) ⇒
 Moves internal cursor to (X;Y) position in the page
@@ -42,7 +42,7 @@ Moves internal cursor to (X;Y) position in the page
 | x | <code>number</code> | 
 | y | <code>number</code> | 
 
-<a id="module_pdfkitgrid.border" name="module_pdfkitgrid.border"></a>
+<a id="module_pdfkitgrid.border"></a>
 
 ### pdfkitgrid.border(startX, startY, width, height, options) ⇒
 **Kind**: static method of [<code>pdfkitgrid</code>](#module_pdfkitgrid)  
@@ -56,7 +56,7 @@ Moves internal cursor to (X;Y) position in the page
 | height | <code>number</code> |  | 
 | options | <code>Object</code> | <code>{}</code> | 
 
-<a id="module_pdfkitgrid.checkbox" name="module_pdfkitgrid.checkbox"></a>
+<a id="module_pdfkitgrid.checkbox"></a>
 
 ### pdfkitgrid.checkbox(text, options)
 Draws a checkbox with optional label
@@ -68,7 +68,7 @@ Draws a checkbox with optional label
 | text | <code>string</code> | <code>null</code> | 
 | options | <code>Object</code> | <code>{}</code> | 
 
-<a id="module_pdfkitgrid.row" name="module_pdfkitgrid.row"></a>
+<a id="module_pdfkitgrid.row"></a>
 
 ### pdfkitgrid.row(cells)
 Draws a row of passed in cells
@@ -79,7 +79,7 @@ Draws a row of passed in cells
 | --- | --- |
 | cells | <code>Array.&lt;Object&gt;</code> | 
 
-<a id="module_pdfkitgrid.grid" name="module_pdfkitgrid.grid"></a>
+<a id="module_pdfkitgrid.grid"></a>
 
 ### pdfkitgrid.grid(cells, globalOptions)
 Draws a list of cells in a grid
