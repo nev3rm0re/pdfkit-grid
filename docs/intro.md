@@ -1,13 +1,13 @@
 # Introduction
 
-This project is an attempt to make it easier to layout elements in 
-PDFKit. I am mostly used to Bootstrap CSS and similar grid system, so I
+This project is an attempt to make it easier to layout elements in   
+PDFKit. I am mostly used to Bootstrap CSS and similar grid system, so I  
 developed my own helper functions to use similar concepts while creating PDFs.
 
-Thinking I might reuse same functions next time I will have to work with 
-PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s 
-`PDFDocument`. It works by extending `PDFDocument`, augmenting it with 
-additional methods, in the same way `PDFDocument`'s own `text`, `color` and
+Thinking I might reuse same functions next time I will have to work with   
+PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s   
+`PDFDocument`. It works by extending `PDFDocument`, augmenting it with   
+additional methods, in the same way `PDFDocument`'s own `text`, `color` and  
 other mixins do.
 
 # Usage
@@ -31,4 +31,13 @@ doc.text('Hello world!');
 
 # Available methods
 
-List of available methods you can find in the [API section](/api.md) of documentation.
+### Styling methods
+
+#### boldText\(\)
+
+### Layout methods
+
+#### grid\(\)
+
+You can find more detailed description of methods in the [API section](/api.md) of documentation.
+
