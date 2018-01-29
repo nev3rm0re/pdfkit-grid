@@ -52,5 +52,9 @@ doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSiz
 
 ### grid\(\)
 
+Draws a list of passed in cells in a grid. See [API description][#grid]
+
+
+
 You can find more detailed description of methods in the [API section](/api.md) of documentation.
 
