@@ -6,4 +6,4 @@
   * [.row(cells)](api.md#module_pdfkitgrid.row)
   * [.grid(cells, globalOptions)][#grid]
   
-  [#grid]: (api.md#module_pdfkitgrid.grid)
+  [#grid]: (/api.md#module_pdfkitgrid.grid)
