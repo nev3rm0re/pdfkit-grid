@@ -52,7 +52,7 @@ doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSiz
 
 ### grid\(\)
 
-Draws a list of passed in cells in a grid. See [API description][#grid]
+Draws a list of passed in cells in a grid. See [API description](/api.md#module_pdfkitgrid.grid)
 
 
 
