@@ -37,7 +37,7 @@ doc.text('Hello world!');
 
 ## Layout methods
 
-### grid\(\)
+### grid()
 
 You can find more detailed description of methods in the [API section](/api.md) of documentation.
 
