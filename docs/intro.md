@@ -1,12 +1,12 @@
 # Introduction
 
-This project is an attempt to make it easier to layout elements in   
+This project is an attempt to make it easier to layout elements in  
 PDFKit. I am mostly used to Bootstrap CSS and similar grid system, so I  
 developed my own helper functions to use similar concepts while creating PDFs.
 
-Thinking I might reuse same functions next time I will have to work with   
-PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s   
-`PDFDocument`. It works by extending `PDFDocument`, augmenting it with   
+Thinking I might reuse same functions next time I will have to work with  
+PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s  
+`PDFDocument`. It works by extending `PDFDocument`, augmenting it with  
 additional methods, in the same way `PDFDocument`'s own `text`, `color` and  
 other mixins do.
 
@@ -33,23 +33,24 @@ doc.text('Hello world!');
 
 ## Styling methods
 
-### boldText()
+### boldText\(\)
 
-Prints text in "Bold" font at `x` and `y` position on the page. `options` array is passed to 
-`pdfkit`'s `text()` method. Additionally `fontSize` parameter is available to set size of "bold"
+Prints text in "Bold" font at `x` and `y` position on the page. `options` array is passed to   
+`pdfkit`'s `text()` method. Additionally `fontSize` parameter is available to set size of "bold"  
 text.
 
-You need to register "Bold" font beforehand:
+You need to register "Bold" and "Normal" font beforehand:
 
 ```js
 const doc = new PDFDocument({/* ... */});
-doc.registerFont("Bold", "Helvetica-Bold");
+doc.registerFont('Bold', 'Helvetica-Bold').registerFont('Normal', 'Helvetica');
 
-doc.text('Hello, ').boldText('world', null, null, { fontSize: 12 });
+doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSize: 12 });
 ```
+
 ## Layout methods
 
-### grid()
+### grid\(\)
 
 You can find more detailed description of methods in the [API section](/api.md) of documentation.
 
