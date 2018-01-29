@@ -8,10 +8,11 @@ module.exports = {
 
     doc.pipe(stream);
 
-    doc.registerFont('Bold', 'Helvetica-Bold');
-    doc.registerFont('Normal', 'Helvetica');
+    doc
+      .registerFont('Bold', 'Helvetica-Bold')
+      .registerFont('Normal', 'Helvetica');
 
-    doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSize: 12 });
+    doc.text('Hello, ', { continued: true }).boldText('world!', null, null, { fontSize: 12 });
 
     doc.end();
   },
