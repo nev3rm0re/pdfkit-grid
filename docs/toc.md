@@ -4,6 +4,6 @@
   * [.border(startX, startY, width, height, options)](api.md#module_pdfkitgrid.border) ⇒
   * [.checkbox(text, options)](api.md#module_pdfkitgrid.checkbox)
   * [.row(cells)](api.md#module_pdfkitgrid.row)
-  * [.grid(cells, globalOptions)][#grid]
+  * [.grid(cells, globalOptions)][grid]
   
-  [#grid]: api.md#module_pdfkitgrid.grid
+  [grid]: api.md#module_pdfkitgrid.grid
