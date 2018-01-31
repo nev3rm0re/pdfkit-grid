@@ -20,20 +20,20 @@ module.exports = {
     y /*: ?number */, 
     options /*: Object */ = {}
   ) {
-    if (x !== null && typeof x == "object") {
+    if (x !== null && typeof x == 'object') {
       options = x;
       x = this.x;
       y = this.y;
-    } else if (y !== null && typeof y == "object") {
+    } else if (y !== null && typeof y == 'object') {
       options = y;
       y = null;
     }
     options = options || {};
 
     const fontSize = options.fontSize || 11;
-    return this.font("Bold", fontSize)
+    return this.font('Bold', fontSize)
       .text(text, x, y, options)
-      .font("Normal", 9);
+      .font('Normal', 9);
   },
 
   /**
@@ -52,8 +52,17 @@ module.exports = {
   /**
    * Creates border around specified area
    * 
-   */
-  /**
+   * You can specify which borders should be drawn, using `options.border` property.
+   * `border` can be either `boolean`, or a string indicating "directions" to draw:
+   * 
+   * N - north or top
+   * S - south or bottom
+   * E - east or right
+   * W - west or left
+   * 
+   * `border` of `"NSEW"` is identical to `true` - all borders will be drawn
+   * 
+   *
    * @param  {number} startX
    * @param  {number} startY
    * @param  {number} width
@@ -72,27 +81,27 @@ module.exports = {
     let border;
 
     if (options.border === true) {
-      border = "WNES";
+      border = 'WNES';
     } else {
-      border = options.border || "";
+      border = options.border || '';
     }
 
-    if (border.indexOf("W") >= 0) {
+    if (border.indexOf('W') >= 0) {
       doc.moveTo(startX, startY);
       doc.lineTo(startX, startY + height);
     }
 
-    if (border.indexOf("N") >= 0) {
+    if (border.indexOf('N') >= 0) {
       doc.moveTo(startX, startY);
       doc.lineTo(startX + width, startY);
     }
 
-    if (border.indexOf("E") >= 0) {
+    if (border.indexOf('E') >= 0) {
       doc.moveTo(startX + width, startY);
       doc.lineTo(startX + width, startY + height);
     }
 
-    if (border.indexOf("S") >= 0) {
+    if (border.indexOf('S') >= 0) {
       doc.moveTo(startX, startY + height);
       doc.lineTo(startX + width, startY + height);
     }
@@ -156,7 +165,7 @@ module.exports = {
         carry.x = doc.x + cellWidth;
         var options = {
           width: cellWidth,
-          align: "center"
+          align: 'center'
         };
         doc.text(item.text, options);
         doc.x = carry.x;
@@ -172,7 +181,7 @@ module.exports = {
       const start = carry.x;
       const width = (item.width || defaultWidth) + padding * 2;
       doc.border(start, tableStart, width, carry.maxY - tableStart, {
-        border: "WE"
+        border: 'WE'
       });
       carry.x += width;
       return carry;
