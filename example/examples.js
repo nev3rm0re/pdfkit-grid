@@ -1,5 +1,5 @@
 module.exports = {
-  example1: (PDFDocument, stream, content, iframe) => {
+  example1: (PDFDocument, stream, content) => {
     const doc = new PDFDocument({
       margins: { top: 12, left: 12, bottom: 24, right: 24 },
       size: 'A4',

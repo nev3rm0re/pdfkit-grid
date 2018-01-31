@@ -31,4 +31,4 @@ doc.text('Hello world!');
 
 # Available methods
 
-List of available methods you can find in the [API section](/api.md) of documentation.
+List of available methods you can find in the [API section](https://nev3rm0re.github.io/pdfkit-grid/api.html) of documentation.
