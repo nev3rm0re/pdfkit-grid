@@ -55,9 +55,9 @@ module.exports = {
    * You can specify which borders should be drawn, using `options.border` property.
    * `border` can be either `boolean`, or a string indicating "directions" to draw:
    * 
-   * N - north or top
-   * S - south or bottom
-   * E - east or right
+   * N - north or top,
+   * S - south or bottom,
+   * E - east or right,
    * W - west or left
    * 
    * `border` of `"NSEW"` is identical to `true` - all borders will be drawn
