@@ -50,7 +50,7 @@ doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSiz
 
 ### border\(x, y, width, height, options\)
 
-Draws a border \(basically a rectangle\). Options allow to specify how the border should be drawn. See \[API description\]\(./api.md\#module\_pdfkitgrid.border\)
+Draws a border \(basically a rectangle\). Options allow to specify how the border should be drawn. See [API description](./api.md#module_pdfkitgrid.border)
 
 ## Layout methods
 
