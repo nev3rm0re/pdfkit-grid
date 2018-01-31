@@ -61,7 +61,6 @@ module.exports = {
    * W - west or left
    * 
    * `border` of `"NSEW"` is identical to `true` - all borders will be drawn
-   * 
    *
    * @param  {number} startX
    * @param  {number} startY
