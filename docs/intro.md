@@ -1,14 +1,10 @@
+# PDFKit Grid v0.0.0  
+
 # Introduction
 
-This project is an attempt to make it easier to layout elements in  
-PDFKit. I am mostly used to Bootstrap CSS and similar grid system, so I  
-developed my own helper functions to use similar concepts while creating PDFs.
+This project is an attempt to make it easier to layout elements in PDFKit. I am mostly used to Bootstrap CSS and similar grid system, so I developed my own helper functions to use similar concepts while creating PDFs.
 
-Thinking I might reuse same functions next time I will have to work with  
-PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s  
-`PDFDocument`. It works by extending `PDFDocument`, augmenting it with  
-additional methods, in the same way `PDFDocument`'s own `text`, `color` and  
-other mixins do.
+Thinking I might reuse same functions next time I will have to work with PDFKit.js, I decided to make it into a module - a "mixin" for `pdfkit`'s `PDFDocument`. It works by extending `PDFDocument`, augmenting it with additional methods, in the same way `PDFDocument`'s own `text`, `color` and other mixins do.
 
 # Usage
 
@@ -56,7 +52,7 @@ Draws a border \(basically a rectangle\). Options allow to specify how the borde
 
 ### move\(x,y\)
 
-Moves internal pointer to specified coordinates in the page. x and y are expressed in points. 1 point is 1/72 of an inch, or 0.035 of a centimeter. 
+Moves internal pointer to specified coordinates in the page. x and y are expressed in points. 1 point is 1/72 of an inch, or 0.035 of a centimeter.
 
 ### grid\(cells, gridOptions\)
 
