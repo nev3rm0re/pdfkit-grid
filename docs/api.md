@@ -45,6 +45,18 @@ Moves internal cursor to (X;Y) position in the page
 <a id="module_pdfkitgrid.border"></a>
 
 ### pdfkitgrid.border(startX, startY, width, height, options) ⇒
+Creates border around specified area
+
+You can specify which borders should be drawn, using `options.border` property.
+`border` can be either `boolean`, or a string indicating "directions" to draw:
+
+N - north or top
+S - south or bottom
+E - east or right
+W - west or left
+
+`border` of `"NSEW"` is identical to `true` - all borders will be drawn
+
 **Kind**: static method of [<code>pdfkitgrid</code>](#module_pdfkitgrid)  
 **Returns**: PDFDocument  
 
