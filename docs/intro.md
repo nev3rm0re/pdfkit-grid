@@ -35,7 +35,7 @@ doc.text('Hello world!');
 
 ### boldText\(\)
 
-Prints text in "Bold" font at `x` and `y` position on the page. `options` array is passed to   
+Prints text in "Bold" font at `x` and `y` position on the page. `options` array is passed to  
 `pdfkit`'s `text()` method. Additionally `fontSize` parameter is available to set size of "bold"  
 text.
 
@@ -48,12 +48,20 @@ doc.registerFont('Bold', 'Helvetica-Bold').registerFont('Normal', 'Helvetica');
 doc.text('Hello, ', { continued: true }).boldText('world', null, null, { fontSize: 12 });
 ```
 
+### border\(x, y, width, height, options\)
+
+Draws a border \(basically a rectangle\). Options allow to specify how the border should be drawn. See \[API description\]\(./api.md\#module\_pdfkitgrid.border\)
+
 ## Layout methods
 
-### grid\(\)
+### move\(x,y\)
+
+Moves internal pointer to specified coordinates in the page. x and y are expressed in points. 1 point is 1/72 of an inch, or 0.035 of a centimeter. 
+
+### grid\(cells, gridOptions\)
 
 Draws a list of passed in cells in a grid. See [API description](/api.md#module_pdfkitgrid.grid)
 
-You can find more detailed description of methods and their arguments in the [API section](/api.md)
+You can find more detailed description of methods and their arguments in the [API section](/api.md)  
 of documentation.
 
