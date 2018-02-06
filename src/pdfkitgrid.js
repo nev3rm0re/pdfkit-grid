@@ -1,6 +1,28 @@
 /*@flow*/
 /** @module pdfkitgrid */
 module.exports = {
+  addStyle: (styleName, styleDefinition) => {
+    this.grid = this.grid || {};
+    const grid = this.grid;
+    grid.styles[styleName] = styleDefinition;
+  },
+  style: function (styleNameOrDefinition) {
+    if (typeof styleNameOrDefinition == 'string') {
+      return this.style(grid.styles[styleNameOrDefinition]);
+    }
+
+    const defaultDefinition = {
+      fontFamily: 'Helvetica',
+      fontSize: 10
+    }
+
+    const style = Object.assign({}, defaultDefinition, styleNameOrDefinition);
+
+    // Apply styles
+    this.font(style.fontFamily);
+    this.font(style.fontSize);
+  },
+
   /**
    * Sets font to "Bold" (has to be 'pre-registered')
    * 
@@ -120,11 +142,16 @@ module.exports = {
 
     var lineHeight = this.currentLineHeight(false);
     const startY = doc.y;
+    const startX = doc.x;
     this.lineGap(1);
     this.rect(doc.x + 1, doc.y - 1, lineHeight + 2, lineHeight + 2).stroke();
 
+    if (options.checked) {
+      doc.fontSize('13').text('\u00D7', doc.x + 2.5, doc.y - 1).fontSize(9);
+    }
+
     if (text) {
-      var textX = doc.x + 1.5 * lineHeight + 2;
+      var textX = startX + 1.5 * lineHeight + 2;
       // doc.x = textX;
       options.width = this.widthOfString(text) + lineHeight;
 
@@ -257,7 +284,9 @@ module.exports = {
 
       if (callback) {
         const top = doc.y;
+        console.debug('assigning "top" value of doc.y - ', top, '=', doc.y);
         doc.y += padding;
+        console.debug("Adding padding of ", padding);
         const calculatedCell = Object.assign(cell, {
           padding: cellPadding,
           top: top,
@@ -267,10 +296,9 @@ module.exports = {
         callback(doc, cell.left + cellPadding, calculatedCell);
       }
 
-      maxY = Math.max(maxY, doc.y);
+      carry = Math.max(carry, doc.y);
       doc.y = startY;
-
-      carry = Math.max(carry, maxY);
+      console.debug('Return "carry" - max of doc.y', carry);
       return carry;
     }, 0);
 
@@ -289,5 +317,11 @@ module.exports = {
     }
 
     doc.move(doc.LEFT, maxY);
+    return doc;
+  },
+
+  gridText: function(text, x, y, options) {
+    const doc = this;
+    return doc.text(text, x, y, options);
   }
 };
